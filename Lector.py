@@ -15,7 +15,7 @@ portales.append(portal4)
 torre=Torre(estructura,energia,portales)
 print(type(torre.energia))
 print(torre.portales)
-Grafo = nx.DiGraph
+Grafo = nx.Graph()
 def crearGrafoBase(estructura):
     x = estructura.split()
     listaX = []
@@ -50,6 +50,7 @@ def crearPortales():
         resultado=i.replace(" ", "")
         inicio=resultado[0]+resultado[1]
         fin=resultado[2]+resultado[3]
+        print("se conecto:" + inicio + " con:" + final)
         Grafo.add_edge(inicio,fin,weight=100)
 crearGrafoBase(torre.estructura)
 crearPortales()
