@@ -15,7 +15,7 @@ portales.append(portal4)
 torre=Torre(estructura,energia,portales)
 print(type(torre.energia))
 print(torre.portales)
-Grafo = nx.Graph()
+Grafo = nx.DiGraph
 def crearGrafoBase(estructura):
     x = estructura.split()
     listaX = []

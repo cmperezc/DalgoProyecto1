@@ -24,9 +24,13 @@ for i in range(len(listaXY)):
         inicio=listaXY[i]
         final = listaXY[i+1]
         if inicio[0]==final[0]:
+            print(inicio)
+            print(final)
             Grafo.add_edge(inicio,final)
 print(Grafo)
 print(Grafo.edges)
+print(listaXY)
+print(type(listaXY[0]))
 hola ="1 2 3 1"
 print(hola.replace(" ", ""))
 

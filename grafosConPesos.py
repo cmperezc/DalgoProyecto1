@@ -90,34 +90,24 @@ def menorValorNoProcesado(etiquetas, procesados):
     etiquetadosSinProcesar = [nodo__ for nodo__ in iter(etiquetas.items()) if not nodo__[0] in procesados]
     return min(etiquetadosSinProcesar, key=lambda __acum___: __acum___[1][0])[0]
 
-a = "11"
-b = "12"
-c = "13"
-d = "21"
-e = "22"
-f = "23"
-g = "31"
-h = "32"
-ix = "33"
+a = "a"
+b = "b"
+c = "c"
+d = "d"
+
+
 grafo = Grafo()
 agregar(grafo, a)
 agregar(grafo, b)
 agregar(grafo, c)
 agregar(grafo, d)
-agregar(grafo, e)
-agregar(grafo, f)
-agregar(grafo, g)
-agregar(grafo, h)
-agregar(grafo, ix)
+
+
 relacionar(grafo, a, b, 1)
-relacionar(grafo, b, c, 1)
-relacionar(grafo, d, e, 1)
-relacionar(grafo, b, g, 5)
-relacionar(grafo, c, f, 5)
-relacionar(grafo, c, d, 2)
-relacionar(grafo, d, f, 2)
-relacionar(grafo, d, e, 4)
-relacionar(grafo, e, h, 1)
-relacionar(grafo, e, g, 2)
-relacionar(grafo, f, h, 3)
-print (caminoMinimo(grafo, a, c))
+relacionar(grafo, c, d, 3)
+
+
+try:
+    print (caminoMinimo(grafo, a, d))
+except:
+    print("valor no encontrado")
